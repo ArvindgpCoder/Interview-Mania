@@ -1,0 +1,11 @@
+/* customCodemirror.css */
+.CodeMirror {
+    color: white !important;
+    font-size: 20px !important; /* Adjust the font size as needed */
+  }
+  
+  .cm-s-xq-light .CodeMirror-lines {
+    color: white !important;
+    font-size: 20px !important; /* Adjust the font size as needed */
+  }
+  
