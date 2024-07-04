@@ -8,7 +8,7 @@ const Navbar = ({ isAuthenticated, setIsAuthenticated }) => {
 
   const logout = async () => {
     try {
-      const res = await axios.get(`${process.env.REACT_APP_BASE}/auth/logout`);
+      const res = await axios.get(`https://interview-mania.onrender.com/auth/logout`);
       if (res.status === 200) {
         setIsAuthenticated(false);
         navigate("/");

@@ -9,7 +9,7 @@ import "codemirror/theme/material.css";
 import "codemirror/theme/xq-light.css";
 import "./customCodemirror.css";
 
-const socket = io(process.env.REACT_APP_BASE);
+const socket = io("https://interview-mania.onrender.com");
 
 const CodeEditor = ({ defaultValue = "", onChange }) => {
   const textAreaRef = useRef(null);

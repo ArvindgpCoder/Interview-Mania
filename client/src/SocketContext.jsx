@@ -3,7 +3,7 @@ import { io } from "socket.io-client";
 import Peer from "simple-peer";
 
 const SocketContext = createContext();
-const socket = io(process.env.REACT_APP_BASE);
+const socket = io("https://interview-mania.onrender.com");
 
 const ContextProvider = ({ children }) => {
   const [stream, setStream] = useState(null);

@@ -60,7 +60,7 @@ function SignUp() {
     if (!hasError) {
       try {
         const response = await axios.post(
-          `${process.env.REACT_APP_BASE}/auth/signup`,
+          `https://interview-mania.onrender.com/auth/signup`,
           {
             name,
             email,

@@ -23,7 +23,7 @@ require('./passport-config');
 mongoose.connect(process.env.DB_URI);
 
 const corsOptions = {
-    origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
+    origin: process.env.BASE_URL,
     credentials: true
 };
 app.use(cors(corsOptions));

@@ -22,7 +22,7 @@ const App = () => {
   axios.defaults.withCredentials = true;
 
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_BASE}/auth/check`, { withCredentials: true })
+    axios.get(`https://interview-mania.onrender.com/auth/check`, { withCredentials: true })
       .then((response) => {
         if (response.status === 200) {
           setIsAuthenticated(true);

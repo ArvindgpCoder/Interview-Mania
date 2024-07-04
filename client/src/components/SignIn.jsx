@@ -48,7 +48,7 @@ const SignIn = ({ setIsAuthenticated }) => {
     if (!hasError) {
       try {
         const response = await axios.post(
-          `${process.env.REACT_APP_BASE}/auth/login`,
+          `https://interview-mania.onrender.com/auth/login`,
           {
             email,
             password,
