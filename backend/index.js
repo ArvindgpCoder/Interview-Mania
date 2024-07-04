@@ -32,15 +32,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(session({
-    secret: 'keyboard cat',
+    secret: process.env.SESSION_SECRET || 'keyboard cat',
     resave: false,
-    saveUninitialized: false,
-    store: MongoStore.create({
-        mongoUrl: "mongodb+srv://arvindgpta786:parinahi1@cluster3.9zrvtt9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster3"
-    }),
+    saveUninitialized: true,
+    name: 'MyCoolWebAppCookieName', // This needs to be unique per-host.
     cookie: {
-        maxAge: 24 * 60 * 60 * 1000, // 1 day
-        httpOnly: true, sameSite: 'None', secure: true,
+        secure: true, // required for cookies to work on HTTPS
+        httpOnly: false,
+        sameSite: 'none'
     }
 }));
 
