@@ -21,6 +21,7 @@ const SignIn = ({ setIsAuthenticated }) => {
   const [passwordError, setPasswordError] = useState("");
   const [signinError, setSigninError] = useState("");
   const { setName, name } = useContext(SocketContext);
+  const [loading, setloading] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
@@ -152,8 +153,9 @@ const SignIn = ({ setIsAuthenticated }) => {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
+                onClick={() => setloading(true)}
               >
-                Sign In
+                {loading ? "Loading..." : "Sign In"}
               </Button>
               {signinError && (
                 <Typography color="error" align="center" sx={{ mt: 2 }}>

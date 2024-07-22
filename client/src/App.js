@@ -11,7 +11,6 @@ import FrontPage from "./components/FrontPage";
 import Don from "./components/player";
 import Navbar from "./components/Navbar";
 
-// Import the loading video and CSS
 import LoadingVideo from "./components/assets/loadingVideo.mp4";
 import "./components/LoadingVideo.css";
 

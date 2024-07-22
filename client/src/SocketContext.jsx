@@ -121,7 +121,7 @@ const ContextProvider = ({ children }) => {
     if (connectionRef.current) {
       connectionRef.current.destroy();
     }
-    window.location.reload();
+    window.location.href = "/";
   };
 
   return (
